@@ -23,6 +23,11 @@ export const routes: Routes = [
         loadComponent: () =>
             import('./components/join-us/join-us.component').then((c) => c.JoinUsComponent),
     },
+     {
+        path: AppRoutesEnum.CALCULATE_PROFIT,
+        loadComponent: () =>
+            import('./components/how-much-save/how-much-save.component').then((c) => c.HowMuchSaveComponent),
+    },
     {
         path: '',
         redirectTo: AppRoutesEnum.DEFAULT,
