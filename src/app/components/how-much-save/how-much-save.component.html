@@ -6,10 +6,7 @@
       >
         <h3 class="fs-1 text-primary fw-bold mb-4">How much you can save</h3>
         <p class="fs-5 text-secondary mb-5 mb-lg-2">
-          Enter the amount you typically spend to see how much you could save by
-          using Blocknetica. We compare the transaction costs from other
-          merchant apps (3%) with our platform’s lower fee (0.3%), so you can
-          instantly see the amount saved with Blocknetica.
+          Save more on every transaction. Enter an amount to compare Blocknetica’s 0.8% fee with the standard 2.5% others charge.And it’s not just cheaper, you also get same-day settlements, even on weekends and holidays.
         </p>
         <img src="assets/images/calculate.gif" alt="" />
       </div>
@@ -32,7 +29,7 @@
                     [formControl]="amountControl"
                     appNumberOnly
                   />
-                  <label>Volume</label>
+                  <label>Average Monthly Sales Value</label>
                   <app-validation-message [control]="amountControl" />
                 </div>
               </div>
@@ -47,7 +44,7 @@
               <div class="mt-5 calculation-result-content">
                 <div class="p-2 d-flex justify-content-between">
                   <div class="fw-semibold fs-6 text-start">
-                    Other Merchant Apps (3.0%)
+                    Traditional Payment Rails (2.5%)
                   </div>
                   <div class="fs-6">
                     {{ otherMerchantCost | number : "1.2-2" }}
@@ -56,7 +53,7 @@
 
                 <div class="p-2 d-flex justify-content-between">
                   <div class="fs-6 fw-semibold text-start">
-                    Using Blocknetica (0.3%)
+                    Using Blocknetica (0.8%)
                   </div>
                   <div class="fs-6">
                     {{ blockneticaCost | number : "1.2-2" }}

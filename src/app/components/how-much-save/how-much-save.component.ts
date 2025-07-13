@@ -27,9 +27,9 @@ export class HowMuchSaveComponent {
   calculateProfit() {
     if(this.amountControl.valid){
       const amount = parseFloat(this.amountControl.value || '0');
-      this.otherMerchantCost = amount + ((amount * 3)/100);
-      this.blockneticaCost = amount +  ((amount * 0.3)/100);
-      this.savedAmount = this.otherMerchantCost - this.blockneticaCost;
+      this.otherMerchantCost = amount - ((amount * 2.5)/100);
+      this.blockneticaCost = amount -  ((amount * 0.8)/100);
+      this.savedAmount = this.blockneticaCost - this.otherMerchantCost;
     }
   }
 
