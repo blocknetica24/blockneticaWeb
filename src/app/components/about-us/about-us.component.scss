@@ -1,0 +1,43 @@
+.tile-1 {
+    background: url('../../../../public/assets/images/about-us-backgrnd.jpg');
+    background-size: cover; // Show the full image
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-item {
+    -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+
+    img {
+        -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 0 1.125rem rgba(0, 0, 0, 0.1) !important;
+        height: 14rem;
+        object-fit: cover;
+    }
+}
+
+@media(min-width: 768px) {
+    .tile-item {
+        img {
+            height: auto;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .tile-item {
+        img {
+            height: auto;
+        }
+    }
+}
+
+.vision-card{
+    background-color: white;
+    width: 40%;
+}

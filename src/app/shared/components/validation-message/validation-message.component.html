@@ -1,0 +1,7 @@
+@if (control && control.errors && (control.dirty || control.touched) || formSubmission) {
+    <div>
+        <span class="invalid-message mx-2 d-flex justify-content-start">
+            {{ errorMessages[0] }}
+        </span>
+    </div>
+    }

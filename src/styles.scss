@@ -1,0 +1,192 @@
+:root {
+    --text-danger-color: #FF3A44;
+  }
+@font-face {
+    font-family: "open-sans";
+    src: url("../public/assets/fonts/OpenSans-VariableFont.ttf");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+* {
+    font-family: 'open-sans';
+}
+
+
+.container {
+    max-width: 960px;
+}
+
+.icon-link>.bi {
+    width: .75em;
+    height: .75em;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+}
+
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+.product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+}
+
+.product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+}
+
+.product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+}
+
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal>* {
+    flex: 1;
+}
+
+@media (min-width: 768px) {
+    .flex-md-equal>* {
+        flex: 1;
+    }
+}
+
+
+
+.width-fit-content {
+    width: fit-content;
+}
+
+//form
+
+.form-floating{
+    margin-bottom: 8px;
+    input, textarea{
+     border: 1px solid #2ab9a5 !important;
+    }
+}
+  .invalid-message {
+    font-size: 0.8rem !important;
+    font-weight: 400 !important;
+    color: var(--text-danger-color);
+    margin-top: 0.4rem;
+    line-height: 1;
+  }
+
+  .ng-touched.ng-invalid {
+    border-color: var(--text-danger-color) !important;
+  }
+  
+  .form-select.ng-touched.ng-invalid {
+    border-color: var(--text-danger-color) !important;
+  }
+
+.mandatory {
+    &::after {
+      position: unset !important;
+      content: "*" !important;
+      color: var(--evisa-text-danger-color) !important;
+      margin: 0 2px 0 2px !important;
+      background-color: transparent !important;
+      line-height: 1;
+      display: inline-block;
+    }
+  }
+
+
+//text
+.text-primary {
+    color: #2ab9a5 !important;
+}
+
+.text-secondary {
+    color: #8f9397 !important;
+}
+
+
+
+//backgrounds
+.transparent-bg-1 {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.background-light {
+    background: rgb(247, 248, 249);
+}
+
+
+
+//buttons
+
+.btn-primary {
+    background: #ffffff;
+    color: #343a40 !important;
+    border: none;
+    outline: none;
+
+    &:hover {
+        background: #f0f1f3
+    }
+}
+.btn-secondary {
+    color: #ffffff;
+    background: linear-gradient(150deg, #2ab9a5 0%, #97c74e 50%, #2ab9a5 100%);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-size: 260% 100%;
+    background-position: right bottom;
+    border: 0;
+    line-height: 1.92;
+}
+
+//border
+
+.border-primary {
+    border: 2px solid #2ab9a5 !important;
+}

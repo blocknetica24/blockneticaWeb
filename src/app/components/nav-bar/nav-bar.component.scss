@@ -1,0 +1,44 @@
+.navbar {
+    border-bottom: none !important;
+    height: 3.5rem;
+}
+
+.nav-link {
+    color: #2ab9a5;
+
+    &:hover {
+        color: #343a40;
+    }
+}
+
+.navbar-toggler {
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+@media(min-width: 768px) {
+    .scrolled {
+        transition: 0.3s;
+        background: linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+        box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.75);
+
+        .nav-link {
+            color: #ffffff;
+
+            &:hover {
+                color: #343a40;
+            }
+        }
+    }
+
+    .nav-link {
+        color: #ffffff;
+
+        &:hover {
+            color: #343a40;
+        }
+    }
+}

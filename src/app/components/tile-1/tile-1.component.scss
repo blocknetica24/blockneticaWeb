@@ -1,0 +1,46 @@
+.tile-1 {
+    background: linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-image: url("../../../../public/assets/images/block-chain-bg.gif");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right;
+        opacity: 0.1;
+    }
+}
+
+.company-name {
+    text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.37);
+}
+
+.cursor {
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.typewriter-animation {
+    animation:
+        typewriter 5s steps(50) 0s 1 normal both,
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
