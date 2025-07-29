@@ -1,52 +1,75 @@
-.tile-item {
-    -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
-    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+// .tile-item {
+//     -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+//     box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
 
-    img {
-        -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
-        box-shadow: 0 0 1.125rem rgba(0, 0, 0, 0.1) !important;
-        height: 14rem;
-        object-fit: cover;
-    }
+//     img {
+//         -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+//         box-shadow: 0 0 1.125rem rgba(0, 0, 0, 0.1) !important;
+//         height: 14rem;
+//         object-fit: cover;
+//     }
 
-    &:hover {
-        scale: 1.02;
-        transition: 0.7s;
-    }
+//     &:hover {
+//         scale: 1.02;
+//         transition: 0.7s;
+//     }
+// }
+
+// @media(min-width: 576px) {
+//     .tile1-container {
+//         width: 75%;
+//         margin: auto;
+//     }
+// }
+
+// @media(min-width: 768px) {
+//     .tile1-container {
+//         width: 60%;
+//         margin: auto;
+
+//         .tile-item {
+//             img {
+//                 height: 17rem;
+//             }
+//         }
+//     }
+
+// }
+
+// @media(min-width: 992px) {
+//     .tile1-container {
+//         width: 90%;
+//         margin: auto;
+
+//         .tile-item {
+//             max-width: 25rem;
+
+//             img {
+//                 height: auto;
+//             }
+//         }
+//     }
+// }
+
+
+.low-transaction{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../../public/assets/images/low-transaction.jpeg");
+    background-size: cover;
+    background-position: center;
 }
 
-@media(min-width: 576px) {
-    .tile1-container {
-        width: 75%;
-        margin: auto;
-    }
+.global-reach{
+    background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("../../../../public/assets/images/global-reach.jpeg");
+    background-size: cover;
+    background-position: center;
 }
-
-@media(min-width: 768px) {
-    .tile1-container {
-        width: 60%;
-        margin: auto;
-
-        .tile-item {
-            img {
-                height: 17rem;
-            }
-        }
-    }
-
+.instant-settlement{
+    background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("../../../../public/assets/images/instant-settlement.jpeg");
+    background-size: cover;
+    background-position: center;
 }
-
-@media(min-width: 992px) {
-    .tile1-container {
-        width: 90%;
-        margin: auto;
-
-        .tile-item {
-            max-width: 25rem;
-
-            img {
-                height: auto;
-            }
-        }
-    }
+.no-chargebacks{
+    background:  linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url("../../../../public/assets/images/no-chargebacks.png");
+    background-size: cover;
+    background-position: center;
 }

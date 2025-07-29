@@ -1,50 +1,91 @@
-<div class="d-flex justify-content-center p-3">
-  <div class="text-center p-3 align-items-stretch" style="min-width: 35%;">
-    <div
-      class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100"
-    >
-      <div class="mb-3 pb-3">
-        <h2 class="fs-3 fw-bold">Contact Us</h2>
-        <form [formGroup]="contactUsForm" (ngSubmit)="onSubmit()" autocomplete="off">
-            <div>
-                <div class="form-floating">
-                  <input class="form-control px-4" type="email" autocomplete="off"
-                    placeholder="Email" formControlName="email" />
-                  <label>Email</label>
-                  <app-validation-message [control]="contactUsForm.get('email')" />
+<div class="pt-5">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div
+        class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 d-flex flex-column justify-content-center px-4"
+      >
+        <h3 class="fs-1 text-primary fw-bold">Get in Touch</h3>
+        <p class="fs-5 text-secondary mb-5 mb-lg-2">
+          Have questions or want to learn more? Reach out to us, and we’ll get
+          back to you as soon as possible.
+        </p>
+      </div>
+      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+        <div class="text-center">
+          <div
+            class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100"
+          >
+            <div class="mb-3 pb-3">
+              <h2 class="fs-3 fw-bold text-primary mb-5">Contact Us</h2>
+              <form
+                [formGroup]="contactUsForm"
+                (ngSubmit)="onSubmit()"
+                autocomplete="off"
+              >
+                <div class="pb-2">
+                  <div class="form-floating">
+                    <input
+                      class="form-control px-4"
+                      type="email"
+                      autocomplete="off"
+                      placeholder="Email"
+                      formControlName="email"
+                    />
+                    <label>Email</label>
+                    <app-validation-message
+                      [control]="contactUsForm.get('email')"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="form-floating">
-                  <input class="form-control px-4" type="text" autocomplete="off"
-                    placeholder="Name" formControlName="name" [maxlength]="globalDatas.MAX_LENGTH_LIMIT"/>
-                  <label>Name</label>
-                  <app-validation-message [control]="contactUsForm.get('name')" />
+                <div class="pb-2">
+                  <div class="form-floating">
+                    <input
+                      class="form-control px-4"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Name"
+                      formControlName="name"
+                      [maxlength]="globalDatas.MAX_LENGTH_LIMIT"
+                    />
+                    <label>Name</label>
+                    <app-validation-message
+                      [control]="contactUsForm.get('name')"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <div class="form-floating">
-                    <textarea class="form-control"
-                    placeholder="Enter your message"
-                    autocomplete="off" formControlName="message"
-                    style="height: 100px;"></textarea>
-                  <label>Message</label>
-                  <app-validation-message [control]="contactUsForm.get('message')" />
+                <div class="pb-2">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      placeholder="Enter your message"
+                      autocomplete="off"
+                      formControlName="message"
+                      style="height: 100px"
+                    ></textarea>
+                    <label>Message</label>
+                    <app-validation-message
+                      [control]="contactUsForm.get('message')"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div>
-                <button class="btn btn-secondary px-5 py-2 mt-5 fs-6 rounded-5">
+                <div>
+                  <button
+                    class="btn btn-secondary px-5 py-2 mt-5 fs-6 rounded-5"
+                  >
                     Submit
                   </button>
-              </div>
-        </form>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <ng-template #successTpl> 'Email sent successfully!' </ng-template>
+
+  <ng-template #dangerTpl>
+    {{ this.errorMessage }}
+  </ng-template>
 </div>
-
-<ng-template #successTpl> 'Email sent successfully!' </ng-template>
-
-<ng-template #dangerTpl>
-	{{this.errorMessage}}
-</ng-template>

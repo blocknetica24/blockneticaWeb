@@ -1,6 +1,7 @@
 :root {
     --text-danger-color: #FF3A44;
-  }
+}
+
 @font-face {
     font-family: "open-sans";
     src: url("../public/assets/fonts/OpenSans-VariableFont.ttf");
@@ -105,39 +106,42 @@ body {
 
 //form
 
-.form-floating{
+.form-floating {
     margin-bottom: 8px;
-    input, textarea{
-     border: 1px solid #2ab9a5 !important;
+
+    input,
+    textarea {
+        border: 1px solid #2ab9a5 !important;
     }
 }
-  .invalid-message {
+
+.invalid-message {
     font-size: 0.8rem !important;
     font-weight: 400 !important;
     color: var(--text-danger-color);
     margin-top: 0.4rem;
     line-height: 1;
-  }
+}
 
-  .ng-touched.ng-invalid {
+.ng-touched.ng-invalid {
     border-color: var(--text-danger-color) !important;
-  }
-  
-  .form-select.ng-touched.ng-invalid {
+}
+
+.form-select.ng-touched.ng-invalid {
     border-color: var(--text-danger-color) !important;
-  }
+}
 
 .mandatory {
     &::after {
-      position: unset !important;
-      content: "*" !important;
-      color: var(--evisa-text-danger-color) !important;
-      margin: 0 2px 0 2px !important;
-      background-color: transparent !important;
-      line-height: 1;
-      display: inline-block;
+        position: unset !important;
+        content: "*" !important;
+        color: var(--evisa-text-danger-color) !important;
+        margin: 0 2px 0 2px !important;
+        background-color: transparent !important;
+        line-height: 1;
+        display: inline-block;
     }
-  }
+}
 
 
 //text
@@ -149,6 +153,10 @@ body {
     color: #8f9397 !important;
 }
 
+.text-primary-light {
+    color: #97c74e;
+}
+
 
 
 //backgrounds
@@ -158,6 +166,10 @@ body {
 
 .background-light {
     background: rgb(247, 248, 249);
+}
+
+.background-primary-light {
+    background: rgba(42, 185, 165, 0.09);
 }
 
 
@@ -174,6 +186,7 @@ body {
         background: #f0f1f3
     }
 }
+
 .btn-secondary {
     color: #ffffff;
     background: linear-gradient(150deg, #2ab9a5 0%, #97c74e 50%, #2ab9a5 100%);

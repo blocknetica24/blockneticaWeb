@@ -5,6 +5,7 @@ import { ApiService } from '../../services/api.service';
 import { ApiUrls } from '../../constants/apiUrls';
 import { ValidationMessageComponent } from "../../shared/components/validation-message/validation-message.component";
 import { ToastService } from '../../services/toast.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-contact-us',
@@ -23,6 +24,7 @@ export class ContactUsComponent {
   globalDatas = GlobalDatas;
   apiUrls = ApiUrls;
   errorMessage!: string;
+  emailSubject = 'Contact Us Message'
 
   constructor(
     private _fb: FormBuilder,
@@ -50,8 +52,13 @@ export class ContactUsComponent {
 
   onSubmit(){
     if( this.contactUsForm.valid){
+    const params = {
+      to: environment.emailId,
+      subject: this.emailSubject,
+      text: `This is the message from '${this.contactUsForm.value.name}' and his email is '${this.contactUsForm.value.email}' his message is '${this.contactUsForm.value.message}'`
+    }
       this._apiService
-      .callPostMiddleware(this.apiUrls.contactUs,  this.contactUsForm.value)
+      .callPostMiddleware(this.apiUrls.contactUs,  params)
       .subscribe({
         next: (response: any) => {
           if (response?.ok) {

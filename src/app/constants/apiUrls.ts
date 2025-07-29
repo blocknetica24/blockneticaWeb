@@ -1,4 +1,4 @@
 export const ApiUrls = {
     contactUs: 'mail/send',
-    joinUs: 'joinUs'
+    joinUs: 'mail/send'
 }

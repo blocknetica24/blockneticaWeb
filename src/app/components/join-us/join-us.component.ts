@@ -5,6 +5,7 @@ import { ApiUrls } from '../../constants/apiUrls';
 import { ApiService } from '../../services/api.service';
 import { ToastService } from '../../services/toast.service';
 import { ValidationMessageComponent } from "../../shared/components/validation-message/validation-message.component";
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-join-us',
@@ -23,6 +24,7 @@ export class JoinUsComponent {
   globalDatas = GlobalDatas;
   apiUrls = ApiUrls;
   errorMessage!: string;
+  emailSubject = 'Partner With Us Inquiry'
 
   constructor(
     private _fb: FormBuilder,
@@ -51,8 +53,13 @@ export class JoinUsComponent {
 
   onSubmit(){
     if( this.joinUsForm.valid){
+      const params = {
+        to: environment.emailId,
+        subject: this.emailSubject,
+        text: `This is the message from '${this.joinUsForm.value.name}', Comany name is '${this.joinUsForm.value.company}' and his Email is '${this.joinUsForm.value.email}' his Average monthly volume is '${this.joinUsForm.value.avgMonthlyVolume}'`
+      }
       this._apiService
-      .callPostMiddleware(this.apiUrls.joinUs,  this.joinUsForm.value)
+      .callPostMiddleware(this.apiUrls.joinUs,  params)
       .subscribe({
         next: (response: any) => {
           if (response?.ok) {

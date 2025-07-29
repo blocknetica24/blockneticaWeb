@@ -1,6 +1,7 @@
 .navbar {
     border-bottom: none !important;
     height: 3.5rem;
+    background: linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
 }
 
 .nav-link {
@@ -9,6 +10,10 @@
     &:hover {
         color: #343a40;
     }
+}
+
+.active {
+     color: #343a40 !important;
 }
 
 .navbar-toggler {

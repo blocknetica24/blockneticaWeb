@@ -1,43 +1,37 @@
-.tile-1 {
-    background: url('../../../../public/assets/images/about-us-backgrnd.jpg');
-    background-size: cover; // Show the full image
+.about-us-banner {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("../../../../public/assets/images/about-us-backgrnd.jpg");
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 35rem;
+    min-height: calc(100vh - 3.5rem);
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .banner {
+        .fs-6 {
+            line-height: 2;
+        }
+    }
 }
 
-.tile-item {
+.feature {
     -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
     box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
-
-    img {
-        -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
-        box-shadow: 0 0 1.125rem rgba(0, 0, 0, 0.1) !important;
-        height: 14rem;
-        object-fit: cover;
-    }
 }
 
-@media(min-width: 768px) {
-    .tile-item {
-        img {
-            height: auto;
+.our-story {
+    .row {
+        background-color: #2ab9a517;
+        p{
+            line-height: 2;
         }
     }
 }
 
-@media(min-width: 992px) {
-    .tile-item {
-        img {
-            height: auto;
-        }
-    }
-}
 
-.vision-card{
-    background-color: white;
-    width: 40%;
-}
+@media(min-width: 768px) {}
+
+@media(min-width: 992px) {}

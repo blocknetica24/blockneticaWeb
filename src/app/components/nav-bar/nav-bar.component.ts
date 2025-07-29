@@ -22,7 +22,7 @@ export class NavBarComponent {
   }
 
   constructor(
-    public router: Router
+    protected router: Router
   ) { }
 
   ngOnInit() {
