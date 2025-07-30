@@ -16,7 +16,7 @@ export class NavBarComponent {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     // Detect scroll > 50px
-    if(this.router.url === "/"){
+    if (this.router.url === "/") {
       this.scrolled = window.pageYOffset > 50;
     }
   }
@@ -27,13 +27,14 @@ export class NavBarComponent {
 
   ngOnInit() {
     this.router.events
-    .pipe(filter(event => event instanceof NavigationEnd))
-    .subscribe(() => {
-      this.scrolled = this.router.url !== "/";
-    });
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.scrolled = this.router.url !== "/";
+      });
   }
 
-  redirectToUrl(url: string){
+  redirectToUrl(url: string) {
+    window.scrollTo(0, 0);
     this.router.navigate([url]);
   }
 }

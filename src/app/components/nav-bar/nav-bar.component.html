@@ -1,84 +1,42 @@
-<nav
-  class="navbar navbar-expand-md fixed-top border-bottom"
-  [ngClass]="{ scrolled: scrolled }"
->
+<nav class="navbar navbar-expand-md fixed-top border-bottom" [ngClass]="{ scrolled: scrolled }">
   <div class="container">
-    <a class="navbar-brand d-md-none fw-bolder text-white fw-bold" (click)="redirectToUrl(appRoutesEnum.DEFAULT)">
-      Blocknetica
+    <a class="navbar-brand cursor-pointer d-md-none fw-bolder text-white fw-bold"
+      (click)="redirectToUrl(appRoutesEnum.DEFAULT)">
+      <img style="height: 2rem;" src="assets/images/logo.png" alt="">
     </a>
-    <button
-      class="navbar-toggler border-white"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvas"
-      aria-controls="offcanvas"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+      aria-controls="offcanvas" aria-label="Toggle navigation">
       <img src="assets/icons/menu-line.svg" />
     </button>
-    <div
-      class="offcanvas offcanvas-end"
-      tabindex="-1"
-      id="offcanvas"
-      aria-labelledby="offcanvasLabel"
-    >
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title text-primary fw-bold" id="offcanvasLabel">
-          Blocknetica
+          <img class="mob-log" src="assets/images/logo.png" alt="">
         </h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
         <ul class="navbar-nav flex-grow-1 justify-content-between">
-          <li class="nav-item text-center d-none d-md-block">
-            <a
-             [ngClass]="{active : router.url === '/'}"
-              class="nav-link fw-normal fs-5"
-              (click)="redirectToUrl(appRoutesEnum.DEFAULT)"
-              >Blocknetica</a
-            >
+          <li class="cursor-pointer nav-item text-center d-none d-md-block">
+            <a [ngClass]="{active : router.url === '/'}" class="nav-link fw-medium fs-5"
+              (click)="redirectToUrl(appRoutesEnum.DEFAULT)">
+              <img style="height: 2rem;" src="assets/images/logo.png" alt=""></a>
           </li>
-          <li class="nav-item text-center d-md-none">
-            <a  
-            data-bs-dismiss="offcanvas"
-            [ngClass]="{active : router.url === '/'}"
-              class="nav-link fw-normal fs-5"
-              (click)="redirectToUrl(appRoutesEnum.DEFAULT)"
-              >Home</a
-            >
+          <li class="nav-item text-center d-md-none cursor-pointer">
+            <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url === '/'}" class="nav-link fw-medium fs-5"
+              (click)="redirectToUrl(appRoutesEnum.DEFAULT)">Home</a>
           </li>
-          <li class="nav-item text-center">
-            <a
-             data-bs-dismiss="offcanvas"
-             [ngClass]="{active : router.url.includes(appRoutesEnum.JOIN_US)}"
-              class="nav-link fw-normal fs-5"
-              (click)="redirectToUrl(appRoutesEnum.JOIN_US)"
-              >Join Us</a
-            >
+          <li class="nav-item text-center cursor-pointer">
+            <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url.includes(appRoutesEnum.ABOUT_US) }"
+              class="nav-link fw-medium fs-5" (click)="redirectToUrl(appRoutesEnum.ABOUT_US)">About Us</a>
           </li>
-
-          <li class="nav-item text-center">
-            <a
-             data-bs-dismiss="offcanvas"
-             [ngClass]="{active : router.url.includes(appRoutesEnum.ABOUT_US) }"
-              class="nav-link fw-normal fs-5"
-              (click)="redirectToUrl(appRoutesEnum.ABOUT_US)"
-              >About Us</a
-            >
+          <li class="nav-item text-center cursor-pointer">
+            <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url.includes(appRoutesEnum.JOIN_US)}"
+              class="nav-link fw-medium fs-5" (click)="redirectToUrl(appRoutesEnum.JOIN_US)">Join Us</a>
           </li>
-          <li class="nav-item text-center">
-            <a
-             data-bs-dismiss="offcanvas"
-             [ngClass]="{active : router.url.includes(appRoutesEnum.CONTACT_US) }"
-              class="nav-link fw-normal fs-5"
-              (click)="redirectToUrl(appRoutesEnum.CONTACT_US)"
-              >Contact Us</a
-            >
+          <li class="nav-item text-center cursor-pointer">
+            <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url.includes(appRoutesEnum.CONTACT_US) }"
+              class="nav-link fw-medium fs-5" (click)="redirectToUrl(appRoutesEnum.CONTACT_US)">Contact Us</a>
           </li>
         </ul>
       </div>

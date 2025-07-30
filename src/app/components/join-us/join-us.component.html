@@ -41,14 +41,14 @@
                   </div>
                 </div>
 
-                <div class="pb-2">
+                <!-- <div class="pb-2">
                   <div class="form-floating">
                     <input class="form-control px-4" type="text" autocomplete="off" placeholder="Average Monthly Volume"
                       formControlName="avgMonthlyVolume" />
                     <label>Average Monthly Volume</label>
                     <app-validation-message [control]="joinUsForm.get('avgMonthlyVolume')" />
                   </div>
-                </div>
+                </div> -->
                 <div>
                   <button class="btn btn-secondary px-5 py-2 mt-5 fs-6 rounded-5">
                     Submit
@@ -61,10 +61,4 @@
       </div>
     </div>
   </div>
-
-  <ng-template #successTpl> 'Email sent successfully!' </ng-template>
-
-  <ng-template #dangerTpl>
-    {{ this.errorMessage }}
-  </ng-template>
 </div>

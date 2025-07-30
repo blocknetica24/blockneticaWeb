@@ -4,11 +4,12 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NgClass } from '@angular/common';
 import { filter } from 'rxjs';
+import { ToastTemplateComponent } from "./shared/components/toast-template/toast-template.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavBarComponent, FooterComponent, RouterOutlet, NgClass],
+  imports: [NavBarComponent, FooterComponent, RouterOutlet, NgClass, ToastTemplateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -22,9 +23,9 @@ export class AppComponent {
 
   ngOnInit() {
     this.router.events
-    .pipe(filter(event => event instanceof NavigationEnd))
-    .subscribe(() => {
-      this.isHomePage = this.router.url === "/";
-    });
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.isHomePage = this.router.url === "/";
+      });
   }
 }

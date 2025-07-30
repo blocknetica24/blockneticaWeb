@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Tile2Component } from '../tile-2/tile-2.component';
 import { Tile1Component } from '../tile-1/tile-1.component';
 import { OurVoiceComponent } from '../our-voice/our-voice.component';
@@ -9,5 +9,6 @@ import { OurVoiceComponent } from '../our-voice/our-voice.component';
   imports: [Tile2Component, Tile1Component, OurVoiceComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
-export class HomeComponent {}
+export class HomeComponent { }
