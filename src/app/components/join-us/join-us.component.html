@@ -1,43 +1,75 @@
 <div class="pt-5">
   <div class="container-fluid">
-    <div class="row justify-content-center align-items-center ">
-      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 px-4 d-flex flex-column justify-content-center">
-        <h2 class="fs-1 text-primary fw-bold">Collaborate with Blocknetica</h2>
+    <div class="row justify-content-center align-items-center">
+      <div
+        class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 px-4 d-flex flex-column justify-content-center"
+      >
+        <h2 class="fs-1 text-primary fw-bold mb-4">
+          Collaborate with Blocknetica
+        </h2>
         <p class="text-secondary mb-5 mb-lg-0 fs-5">
           We are actively seeking partnerships with Merchants, Technology
           Providers, and Blockchain Innovators. Join us in transforming the
           payment ecosystem with cutting edge blockchain solutions.
         </p>
-        <img class="mt-4" src="assets/images/join-us.gif" alt="">
+        <img class="mt-4" src="assets/images/join-us.gif" alt="" />
       </div>
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
         <div class="text-center">
-          <div class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100">
+          <div
+            class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100"
+          >
             <div class="mb-3 pb-3">
               <h2 class="fs-3 fw-bold text-primary mb-5">Join Us</h2>
-              <form [formGroup]="joinUsForm" (ngSubmit)="onSubmit()" autocomplete="off">
+              <form
+                [formGroup]="joinUsForm"
+                (ngSubmit)="onSubmit()"
+                autocomplete="off"
+              >
                 <div class="pb-2">
                   <div class="form-floating">
-                    <input class="form-control px-4" type="text" autocomplete="off" placeholder="Name"
-                      formControlName="name" [maxlength]="globalDatas.MAX_LENGTH_LIMIT" />
+                    <input
+                      class="form-control px-4"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Name"
+                      formControlName="name"
+                      [maxlength]="globalDatas.MAX_LENGTH_LIMIT"
+                    />
                     <label>Name</label>
-                    <app-validation-message [control]="joinUsForm.get('name')" />
+                    <app-validation-message
+                      [control]="joinUsForm.get('name')"
+                    />
                   </div>
                 </div>
                 <div class="pb-2">
                   <div class="form-floating">
-                    <input class="form-control px-4" type="text" autocomplete="off" placeholder="Company"
-                      formControlName="company" />
+                    <input
+                      class="form-control px-4"
+                      type="text"
+                      autocomplete="off"
+                      placeholder="Company"
+                      formControlName="company"
+                    />
                     <label>Company</label>
-                    <app-validation-message [control]="joinUsForm.get('company')" />
+                    <app-validation-message
+                      [control]="joinUsForm.get('company')"
+                    />
                   </div>
                 </div>
                 <div class="pb-2">
                   <div class="form-floating">
-                    <input class="form-control px-4" type="email" autocomplete="off" placeholder="Email"
-                      formControlName="email" />
+                    <input
+                      class="form-control px-4"
+                      type="email"
+                      autocomplete="off"
+                      placeholder="Email"
+                      formControlName="email"
+                    />
                     <label>Email</label>
-                    <app-validation-message [control]="joinUsForm.get('email')" />
+                    <app-validation-message
+                      [control]="joinUsForm.get('email')"
+                    />
                   </div>
                 </div>
 
@@ -50,7 +82,9 @@
                   </div>
                 </div> -->
                 <div>
-                  <button class="btn btn-secondary px-5 py-2 mt-5 fs-6 rounded-5">
+                  <button
+                    class="btn btn-secondary px-5 py-2 mt-5 fs-6 rounded-5"
+                  >
                     Submit
                   </button>
                 </div>

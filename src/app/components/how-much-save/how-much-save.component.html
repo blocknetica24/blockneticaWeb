@@ -1,63 +1,77 @@
 <div class="pt-5">
   <div class="container-fluid">
     <div class="row justify-content-center align-items-center">
-      <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 d-flex flex-column justify-content-center px-4">
-        <h3 class="fs-1 text-primary fw-bold">How much you can save</h3>
+      <div
+        class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4 d-flex flex-column justify-content-center px-4"
+      >
+        <h3 class="fs-1 text-primary fw-bold mb-4">How much you can save</h3>
         <p class="fs-5 text-secondary mb-5 mb-lg-2">
-          Enter the amount you typically spend to see how much you could save by using Blocknetica. We compare the transaction costs from other merchant apps (3%) with our platform’s lower fee (0.3%), so you can instantly see the amount saved with Blocknetica.
+          Enter the amount you typically spend to see how much you could save by
+          using Blocknetica. We compare the transaction costs from other
+          merchant apps (3%) with our platform’s lower fee (0.3%), so you can
+          instantly see the amount saved with Blocknetica.
         </p>
-        <img src="assets/images/calculate.gif" alt="">
+        <img src="assets/images/calculate.gif" alt="" />
       </div>
       <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
         <div class="text-center">
-          <div class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100">
+          <div
+            class="tile-item p-4 py-5 rounded-4 d-flex flex-column justify-content-between h-100"
+          >
             <div class="mb-3 pb-3">
               <h2 class="fs-3 fw-bold text-primary mb-5">Calculate</h2>
-            
-                <div class="pb-2">
-                  <div class="form-floating">
-                    <input class="form-control px-4" type="numer" [maxLength]="10" autocomplete="off" placeholder="Volume"
-                      [formControl]="amountControl" appNumberOnly/>
-                    <label>Volume</label>
-                    <app-validation-message [control]="amountControl" />
-                  </div>
+
+              <div class="pb-2">
+                <div class="form-floating">
+                  <input
+                    class="form-control px-4"
+                    type="numer"
+                    [maxLength]="10"
+                    autocomplete="off"
+                    placeholder="Volume"
+                    [formControl]="amountControl"
+                    appNumberOnly
+                  />
+                  <label>Volume</label>
+                  <app-validation-message [control]="amountControl" />
                 </div>
-                <div>
-                  <button class="btn btn-secondary px-5 py-2 mt-4 fs-6 rounded-5" (click)="calculateProfit()">
-                    Calculate
-                  </button>
-                </div>
-                <div class="mt-5 calculation-result-content">
-                      <div class="p-2 d-flex justify-content-between">
-                  <div class="fw-800">
-                   Other Merchant Apps (3.0%) 
+              </div>
+              <div>
+                <button
+                  class="btn btn-secondary px-5 py-2 mt-4 fs-6 rounded-5"
+                  (click)="calculateProfit()"
+                >
+                  Calculate
+                </button>
+              </div>
+              <div class="mt-5 calculation-result-content">
+                <div class="p-2 d-flex justify-content-between">
+                  <div class="fw-semibold fs-6 text-start">
+                    Other Merchant Apps (3.0%)
                   </div>
-                   <div class="">
-                  {{otherMerchantCost | number:'1.2-2'}}
+                  <div class="fs-6">
+                    {{ otherMerchantCost | number : "1.2-2" }}
                   </div>
                 </div>
 
-                  <div class="p-2 d-flex justify-content-between">
-                  <div class="">
-                   Using Blocknetica (0.3%) 
+                <div class="p-2 d-flex justify-content-between">
+                  <div class="fs-6 fw-semibold text-start">
+                    Using Blocknetica (0.3%)
                   </div>
-                   <div class="">
-                  {{blockneticaCost | number:'1.2-2'}}
+                  <div class="fs-6">
+                    {{ blockneticaCost | number : "1.2-2" }}
                   </div>
                 </div>
 
-                  <div class="p-2 d-flex justify-content-between">
-                  <div class="">
-                  Your Profit 
+                <div class="p-2 d-flex justify-content-between">
+                  <div class="fs-6 fw-semibold text-success text-start">
+                    Your Profit
                   </div>
-                   <div class="">
-                  {{savedAmount | number:'1.2-2'}}
+                  <div class="fs-6 text-success">
+                    {{ savedAmount | number : "1.2-2" }}
                   </div>
                 </div>
-                </div>
-
-              
-
+              </div>
             </div>
           </div>
         </div>
