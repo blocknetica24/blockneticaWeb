@@ -27,6 +27,10 @@
               (click)="redirectToUrl(appRoutesEnum.DEFAULT)">Home</a>
           </li>
           <li class="nav-item text-center cursor-pointer">
+            <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url.includes(appRoutesEnum.BLOGS) }"
+              class="nav-link fw-medium fs-5" (click)="redirectToUrl(appRoutesEnum.BLOGS)">Blogs</a>
+          </li>
+          <li class="nav-item text-center cursor-pointer">
             <a data-bs-dismiss="offcanvas" [ngClass]="{active : router.url.includes(appRoutesEnum.ABOUT_US) }"
               class="nav-link fw-medium fs-5" (click)="redirectToUrl(appRoutesEnum.ABOUT_US)">About Us</a>
           </li>

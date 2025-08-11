@@ -4,4 +4,5 @@ export enum AppRoutesEnum {
   ABOUT_US = 'about-us',
   JOIN_US = 'join-us',
   CALCULATE_PROFIT = 'how-much-save',
+  BLOGS = 'blogs',
 }

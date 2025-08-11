@@ -1,0 +1,45 @@
+<div class="blogs-main">
+  @if(blogDetails){
+  <h1 class="fw-bold text-center mt-5 mb-4 text-primary-light">
+    {{ blogDetails.mainTitle }}
+  </h1>
+  <div class="container-fluid mt-2 px-4 px-md-5">
+    <div class="row">
+      @if(blogDetails.mainImage){
+      <div class="col-12 px-4 d-flex justify-content-center">
+        <img class="my-2" [src]="blogDetails.mainImage" alt="" />
+      </div>
+      }
+      <div class="col-12 px-4 d-flex justify-content-center">
+        <p class="text-secondary mb-5 mb-lg-0 fs-5">
+          {{ blogDetails.mainContent }}
+        </p>
+      </div>
+      @if(blogDetails.subContent.length){ @for (subBlog of
+      blogDetails.subContent; track $index) {
+      <div class="col-12 mt-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="text-primary fw-bold mb-4">
+                {{ subBlog.subContentTitle }}
+              </h3>
+            </div>
+            @if(subBlog.subContentImage){
+            <div class="col-12 d-flex justify-content-center">
+              <img class="my-2" [src]="subBlog.subContentImage" alt="" />
+            </div>
+            }
+            <div class="col-12">
+              <p class="text-secondary mb-5 mb-lg-0 fs-5">
+                {{ subBlog.subContentContent }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      } }
+    </div>
+  </div>
+  }
+</div>
