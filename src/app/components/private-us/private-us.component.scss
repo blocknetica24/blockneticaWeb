@@ -1,0 +1,29 @@
+
+.tile-item {
+    -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+
+    img {
+        -webkit-box-shadow: 0 0 3.125rem rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 0 1.125rem rgba(0, 0, 0, 0.1) !important;
+        height: 14rem;
+        object-fit: cover;
+    }
+}
+
+
+@media(min-width: 768px) {
+    .tile-item {
+        img {
+            height: auto;
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    .tile-item {
+        img {
+            height: auto;
+        }
+    }
+}

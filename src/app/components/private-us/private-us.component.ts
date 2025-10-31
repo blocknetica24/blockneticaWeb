@@ -8,17 +8,20 @@ import { ToastService } from '../../services/toast.service';
 import { environment } from '../../../environments/environment';
 
 @Component({
-  selector: "app-contact-us",
+  selector: 'app-private-us',
   standalone: true,
-  imports: [ReactiveFormsModule, ValidationMessageComponent],
-  templateUrl: "./contact-us.component.html",
-  styleUrl: "./contact-us.component.scss",
+  imports: [
+    ReactiveFormsModule,
+    ValidationMessageComponent
+  ],
+  templateUrl: './private-us.component.html',
+  styleUrl: './private-us.component.scss'
 })
-export class ContactUsComponent {
+export class PrivateUsComponent {
   contactUsForm!: FormGroup;
   globalDatas = GlobalDatas;
   apiUrls = ApiUrls;
-  emailSubject = "Contact Us Message";
+  emailSubject = 'Contact Us Message'
 
   constructor(
     private _fb: FormBuilder,
@@ -28,18 +31,19 @@ export class ContactUsComponent {
     this.loadContactUsForm();
   }
 
+
   loadContactUsForm() {
     this.contactUsForm = this._fb.group({
       email: [
-        "",
+        '',
         [
           Validators.required,
           Validators.email,
           Validators.pattern(this.globalDatas.EMAIL_REG_EXP),
         ],
       ],
-      name: ["", [Validators.required]],
-      message: ["", [Validators.required]],
+      name: ['', [Validators.required]],
+      message: ['', [Validators.required]],
     });
   }
 
@@ -48,8 +52,8 @@ export class ContactUsComponent {
       const params = {
         to: environment.emailId,
         subject: this.emailSubject,
-        text: `This is the message from '${this.contactUsForm.value.name}' and his email is '${this.contactUsForm.value.email}' his message is '${this.contactUsForm.value.message}'`,
-      };
+        text: `This is the message from '${this.contactUsForm.value.name}' and his email is '${this.contactUsForm.value.email}' his message is '${this.contactUsForm.value.message}'`
+      }
       this._apiService
         .callPostMiddleware(this.apiUrls.contactUs, params)
         .subscribe({
@@ -59,23 +63,15 @@ export class ContactUsComponent {
             // } else {
             //   this.toastService.show({ message: 'Failed to send message', classname: 'bg-danger text-light' });
             // }
-            this._toastService.show({
-              message: "Message sent successfully!",
-              classname: "bg-success text-light",
-            });
+            this._toastService.show({ message: 'Message sent successfully!', classname: 'bg-success text-light' });
           },
           error: (error: any) => {
-            error.error.error
-              ? this._toastService.show({
-                  message: "Error: " + error?.error?.error,
-                  classname: "bg-danger text-light",
-                })
-              : this._toastService.show({
-                  message: "Failed to send message",
-                  classname: "bg-danger text-light",
-                });
+            error.error.error ?
+              this._toastService.show({ message: 'Error: ' + error?.error?.error, classname: 'bg-danger text-light' }) :
+              this._toastService.show({ message: 'Failed to send message', classname: 'bg-danger text-light' });
           },
         });
     }
   }
+
 }
